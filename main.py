@@ -18,7 +18,6 @@ users = [
 ]
 
 def get_birthdays_per_week(users):
-    print('sadf')
 
     today = datetime.today().date()
     
@@ -36,8 +35,16 @@ def get_birthdays_per_week(users):
             birthday_weekday = birthday.strftime("%A")
             if birthday.weekday() >= 5:
                 birthday_weekday = "Monday"
-            print(birthday_weekday)
             birthday_dict[birthday_weekday].append(name)
-    print(birthday_dict)
+    if birthday_dict['Monday']:
+        print('{:<10}{}'.format("Monday:",birthday_dict['Monday']))
+    if birthday_dict['Tuesday']:
+        print('{:<10}{}'.format("Tuesday:",birthday_dict['Tuesday']))
+    if birthday_dict['Wednesday']:
+        print('{:<10}{}'.format("Wednesday:",birthday_dict['Wednesday']))
+    if birthday_dict['Thursday']:
+        print('{:<10}{}'.format("Thursday:",birthday_dict['Thursday']))
+    if birthday_dict['Friday']:
+        print('{:<10}{}'.format("Friday:",birthday_dict['Friday']))
 
 get_birthdays_per_week(users)
