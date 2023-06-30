@@ -47,4 +47,5 @@ def get_birthdays_per_week(users):
     if birthday_dict['Friday']:
         print('{:<10}{}'.format("Friday:",birthday_dict['Friday']))
 
-get_birthdays_per_week(users)
+if __name__ == '__main__':
+    get_birthdays_per_week(users)
